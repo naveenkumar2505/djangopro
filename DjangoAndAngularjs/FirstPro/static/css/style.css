@@ -1,0 +1,20 @@
+form{
+    margin: 100px 300px;
+    border: 2px silver solid;
+    padding-top: 50px;
+    padding-left: 50px;
+    background: #495057;
+}
+b{
+    color: greenyellow;
+}
+input[placeholder]{
+    color: green;
+}
+input[value]:hover{
+    color: #80bdff;
+}
+h3{
+    color: goldenrod;
+    padding-left: 100px;
+}

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Boys Data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    th,td{
+        padding: 10px 20px;
+        text-align: center;
+    }
+    h1{
+        margin-top: 90px;
+        text-align: center;
+    }
+</style>
+
+</head>
+<body background="http://www.genesisinc.in/media/images/backgrounds/bg-cat-produits-peugeot-v2.jpg">
+<h1>Find Your Perfect Match</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <table border="2">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>FatherName</th>
+                    <th>MotherName</th>
+                    <th>Age</th>
+                    <th>Weight</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for b in boy %}
+                    <tr>
+                    <td>{{ b.name }}</td>
+                    <td>{{ b.fname }}</td>
+                    <td>{{ b.mname }}</td>
+                    <td>{{ b.age }}</td>
+                    <td>{{ b.weight }}</td>
+                    <td>{{ b.email }}</td>
+                    <td>{{ b.mobile }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

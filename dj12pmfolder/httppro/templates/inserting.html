@@ -1,0 +1,63 @@
+<html>
+         <head>
+             <title>html form</title>
+         </head>
+         <style>
+             form{
+                 margin-left: 400px;
+             }
+             table{
+                 border: 3px;
+                 text-align: center;
+             }
+             body{
+                 background-color: burlywood;
+             }
+         </style>
+<body>
+     <form method="post">
+         {% csrf_token %}
+         <h1>Employee Details</h1>
+         <table>
+             <tr>
+                 <th>Enter ID:</th>
+                 <td><input type="number" name="id" placeholder="Enter Your ID"></td>
+
+             <tr>
+                 <th>FirstName:</th>
+                 <td><input type="text" name="fname" placeholder="Enter Your FirstName"></td>
+             </tr>
+             <tr>
+                 <th>LastName:</th>
+                 <td><input type="text" name="lname" placeholder="Enter Your LastName"></td>
+             </tr>
+             <tr>
+                 <th>Salary:</th>
+                 <td><input type="number" name="sal" placeholder="Enter Your salary"></td>
+             </tr>
+             <tr>
+                 <th>location:</th>
+                 <td><input type="text" name="loc" placeholder="Enter Your Location"></td>
+             </tr>
+             <tr>
+                 <th>Email:</th>
+                 <td><input type="email" name="email" placeholder="Enter Your Email"></td>
+             </tr>
+             <tr>
+                 <th>Company:</th>
+                 <td><input type="text" name="com" placeholder="Enter Your Company"></td>
+             </tr>
+             <tr>
+                 <th></th>
+                 <td><input type="submit" value="Submit" class="btn btn-success"></td>
+             </tr>
+
+             <tr>
+                 <th></th>
+                 <td><a href="/search/">search</a> </td>
+             </tr>
+
+         </table>
+     </form>
+</body>
+</html>

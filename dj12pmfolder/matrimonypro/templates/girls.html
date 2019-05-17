@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>Girls Data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    th,td{
+        padding: 10px 20px;
+        text-align: center;
+    }
+    #r1{
+        text-align: right;
+        margin: 20px;
+    }
+    #a1{
+        margin-right: -100px;
+    }
+    h1{
+        margin-top: 90px;
+        text-align: center;
+    }
+</style>
+
+</head>
+<body background="http://www.genesisinc.in/media/images/backgrounds/bg-cat-produits-peugeot-v2.jpg">
+
+<center><h1>Find Your Perfect Match</h1></center>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <table border="2">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>FatherName</th>
+                    <th>MotherName</th>
+                    <th>Age</th>
+                    <th>Weight</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for g in girl %}
+                    <tr>
+                    <td>{{ g.name }}</td>
+                    <td>{{ g.fname }}</td>
+                    <td>{{ g.mname }}</td>
+                    <td>{{ g.age }}</td>
+                    <td>{{ g.weight }}</td>
+                    <td>{{ g.email }}</td>
+                    <td>{{ g.mobile }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        <a id="a1" href="/home">Home Page</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+    <head>
+       <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}">
+       <link rel="stylesheet" href="{% static 'css\bootstrap.grid.css' %}">
+       <link rel="stylesheet" href="{% static 'css\bootstrap.reboot.css' %}">
+       <link rel="stylesheet" href="{% static 'css\basic.css' %}">
+
+    </head>
+  <body>
+
+        <div class="container">
+
+            <div class="row">
+             <div class="col-md-6 col-md-12 " id="header">
+
+                <form method="post" onclick="return validateUser();" name="ulogin" id="f1">
+                    <h3 id="hd1">NN Connection</h3>
+                    <input class="text" name="user_name" placeholder="Enter username">
+                    <input class="text" type="password" name="password" placeholder="Enter password">
+                    <button class="btn-success" type="submit">Login</button>
+                    <button class="btn-danger" type="reset">clear</button>
+                </form>
+
+             </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1 col-md-6">
+                    <form id="f2">
+                         <img src="{% static 'images\pic1.jpg' %}" alt="network picture" width="535px" height="500px">
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+
+  </body>
+
+
+</html>

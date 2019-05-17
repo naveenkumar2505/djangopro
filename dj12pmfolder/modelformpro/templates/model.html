@@ -1,0 +1,35 @@
+<html>
+   <head>
+       <title>modelform</title>
+       <style>
+           h1{
+               font-family: "Bookman Old Style";
+               color: beige;
+           }
+           form{
+               border: 2px;
+               color: black;
+           }
+           b{
+               color: brown;
+           }
+       </style>
+   </head>
+<body>
+<center>
+    <form method="POST">
+        <h1>Modelform</h1>
+        {% csrf_token %}
+        <b>id:</b>{{ form.user_d }}<br><br>
+        <b> Enter Your FirstNmae:</b>{{ form.firstname }}<br><br>
+        <b>Enter Your LatstNmae:</b>{{ form.lastname }}<br><br>
+        <b>Enter Your UserNmae:</b>{{ form.username }}<br><br>
+        <b>Enter Your Email:</b>{{ form.email }}<br><br>
+        <b>Enter Your sal:</b>{{ form.sal }}<br><br>
+        <b>Enter Your Loc:</b>{{ form.loc }}<br><br>
+       <center>
+        <input type="submit" value="submit">
+        <input type="reset" value="clear"></center>
+    </form></center>
+</body>
+</html>

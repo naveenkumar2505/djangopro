@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" ng-app="AppModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <script src="{% static 'js\angular.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}">
+
+    <!--<link rel="stylesheet" href="{% static 'css\style.css' %}">-->
+    <script type="text/javascript">
+        var m1 =angular.module("AppModule",[]);
+        m1.controller("c1",function ($scope) {
+            $scope.message="Wellcome to Angular";
+        })
+
+    </script>
+</head>
+<body ng-controller="c1">
+      {{message}}
+</body>
+</html>

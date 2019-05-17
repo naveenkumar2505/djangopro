@@ -1,0 +1,13 @@
+{% if list %}
+   <h1>Person Details</h1>
+   <ul>
+       {% for person in list %}
+         <li>
+            <a href="{% url 'genericviews:details' person.id%}">
+                {{ person }}
+            </a>
+         </li>
+       {% endfor %}
+
+   </ul>
+{% endif %}

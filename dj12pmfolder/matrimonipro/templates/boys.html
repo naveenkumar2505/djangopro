@@ -1,0 +1,35 @@
+<html>
+   <head>
+       <title>
+           boys data
+       </title>
+   </head>
+<body>
+   <div>
+       {% if data %}
+           <table border="2">
+              <thead>
+                  <tr>
+                      <th>FirstName</th>
+                      <th>LastName</th>
+                      <th>MobileNumber</th>
+                      <th>EmailId</th>
+                      <th>Job</th>
+                  </tr>
+              </thead>
+           {% for i in data %}
+                 <tbody>
+                      <tr>
+                          <td>{{ i.firstname }}</td>
+                          <td>{{ i.lastname }}</td>
+                          <td>{{ i.mobile }}</td>
+                          <td>{{ i.email }}</td>
+                          <td>{{ i.job }}</td>
+                      </tr>
+                 </tbody>
+           {% endfor %}
+           </table>
+       {% endif %}
+   </div>
+</body>
+</html>

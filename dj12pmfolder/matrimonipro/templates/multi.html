@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>multiple forms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+       <style>
+           #lform{
+               background-color: burlywood;
+           }
+           #rform{
+               background-color: tomato;
+           }
+
+           body{
+               background-color: khaki;
+           }
+       </style>
+    </head>
+<body>
+     <div class="container">
+         <div class="row">
+             <div class="col-md-offset-6 col-md-6">
+                 <form method="post" id="lform">
+                     <center><h1>Login Form</h1></center>
+                     {% csrf_token %}
+                     {{ lform }}<br>
+                     <center><button type="submit" name="submit" value="signin" class="btn btn-primary btn-sm">SignIn</button>
+                             <button type="reset" name="clear" class="btn btn-danger">Clear</button>
+                     </center>
+                 </form>
+
+                 <form method="post" id="rform">
+                     <center><h1>Registration Form</h1></center>
+                     {% csrf_token %}
+                     {{ rform }}<br>
+                     <center><button type="submit" name="submit" value="signup" class="btn btn-success">SignUp</button>
+                             <button type="reset" name="clear" class="btn btn-danger">Clear</button>
+                     </center>
+                 </form>
+
+             </div>
+         </div>
+     </div>
+</body>
+</html>

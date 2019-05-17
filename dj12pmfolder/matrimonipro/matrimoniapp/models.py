@@ -1,0 +1,17 @@
+from django.db import models
+class RegistrationData(models.Model):
+    firstname=models.CharField(max_length=20)
+    lastname=models.CharField(max_length=20)
+    username=models.CharField(max_length=20)
+    password1=models.CharField(max_length=20)
+    password2=models.CharField(max_length=20)
+    email=models.EmailField(max_length=20)
+    mobile=models.BigIntegerField()
+    dob=models.DateField()
+    loc=models.CharField(max_length=20)
+    gender=models.CharField(max_length=20)
+    job=models.CharField(max_length=20)
+    salary=models.IntegerField()
+    height=models.FloatField()
+    weight=models.IntegerField()
+    color=models.CharField(max_length=20)

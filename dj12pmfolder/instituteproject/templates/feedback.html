@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Feedback Details</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        ol{
+            list-style-type: none;
+            float: right;
+     }
+        ol li{
+            display: inline-block;
+        }
+        ol li a{
+            padding: 5px 2px;
+            text-decoration: none;
+            font-size: 20px;
+            border: 1px solid white;
+            color: blue;
+        }
+        ol li a:hover{
+            background-color: blue;
+            color: yellow;
+        }
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: cornsilk;
+        }
+        b{
+            color: red;
+            font-size: 30px;
+            font-family: cursive;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <ol>
+        <li><a href="/home/">Home</a> </li>
+        <li><a href="/services/">Services</a> </li>
+        <li><a href="/contact/">Contact</a> </li>
+        <li><a href="/feedback/">Feedback</a> </li>
+        <li><a href="/gallary/">Gallary</a> </li>
+    </ol>
+</header>
+   <div class="container">
+       <div class="row1">
+          <div class="col-md-offset col-md-4">
+           {% if fdata %}
+             {% for data in fdata %}
+                {% if data.rating >= 4 and data.rating <= 5 %}
+                 <b>Name:{{ data.name }}</b><br>
+                 Rating:{{ data.rating }}<br>
+                 Time:{{ data.time }}<br>
+                 Feedback:{{ data.feedback }}<br><br>
+                {% endif %}
+               {% endfor %}
+           {% else %}
+               <center><h4>Feedbacks are not avilable</h4></center>
+           {% endif %}
+          </div>
+       </div>
+        <center><h4>Please Enter Your Feedback</h4></center>
+       <div class="row2">
+           <div class="col-md-offset col-md-4">
+          <form method="post">
+              {% csrf_token %}
+              {{ fform }}<br>
+              <center>
+              <input type="submit" value="submit" class="btn btn-success">
+              <input type="reset" value="clear" class="btn btn-success">
+              </center>
+          </form>
+       </div>
+   </div>
+</div>
+</body>
+</html>

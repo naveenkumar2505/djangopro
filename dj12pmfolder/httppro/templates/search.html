@@ -1,0 +1,74 @@
+<html>
+  <head>
+      <title>serch details</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <style>
+      hr{
+          margin-right: 50%;
+      }
+  </style>
+
+  </head>
+  <body>
+       <div class="container">
+           <h1>serch Employee</h1>
+           <form method="post" action="/search/">
+               {% csrf_token %}
+               <div class="form-group">
+                <input type="text" name="searchKey" placeholder="Enter Firstname or Lastname">
+                   <br>
+                   <label>
+                     <button type="submit" class="btn btn-danger">Search</button>
+                   </label>
+               </div>
+           </form><br><br>
+         <div>
+             {% if match %}
+                 <ul class="messages">
+                 {% for k in match %}
+                    <li style="color: red;font-family: 'Arial Black';font-weight: bold">{{ k.lastname }}</li>
+                 {% endfor %}
+                 </ul>
+             {% endif %}
+             <div><hr>
+                   <div style="color: blue">
+                       {% if match %}
+                           {% for k in match %}
+                                <table border="0px" width="300">
+                                  <tr>
+                                      <td>FirstName</td>
+                                      <td>{{k.firstname  }}</td>
+                                   </tr>
+
+                                    <tr>
+                                      <td>LastName</td>
+                                      <td>{{k.lastname  }}</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Email</td>
+                                      <td>{{k.email  }}</td>
+                                    </tr>
+                                    <tr>
+                                      <td>salary</td>
+                                      <td>{{k.salary  }}</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td>location</td>
+                                      <td>{{k.location  }}</td>
+                                    </tr>
+                                <hr>
+                                </table>
+                           {% endfor %}
+                       {% endif %}
+                   </div>
+           </div>
+         </div>
+       </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Faker Details</title>
+        <style>
+            h1{
+                text-decoration: underline;
+                text-align: center;
+                color: darkkhaki;
+                table-layout: initial;
+                font-family: Broadway;
+            }
+            table{
+                text-align: center;
+                table-layout: inherit;
+                color: black;
+                margin-left: 150px;
+            }
+            td,td{
+                padding: 5px 30px;
+                font-family: Arial;
+            }
+            th{
+                background-color: papayawhip;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Faker Data</h1>
+    {% if  data %}
+    <table border="2">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>DOB</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        {% for i in data %}
+        <tbody>
+               <tr>
+                   <td>{{i.first_name}}</td>
+                   <td>{{i.last_name}}</td>
+                   <td>{{i.email}}</td>
+                   <td>{{i.salary}}</td>
+                   <td>{{i.dob}}</td>
+                   <td>{{i.role}}</td>
+               </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+{% else %}
+   <h2>Emp Data not found</h2>
+{% endif %}
+</body>
+</html>

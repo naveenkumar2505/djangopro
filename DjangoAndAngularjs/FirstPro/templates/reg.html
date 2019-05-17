@@ -1,0 +1,56 @@
+{% load static %}
+<html ng-app="AppModule">
+
+    <script src="{% static 'js\angular.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+
+    <script type="text/javascript">
+
+        var m1=angular.module("AppModule",[]);
+
+        m1.controller("c1",function ($scope) {
+
+
+            $scope.Registration={};
+
+        });
+
+    </script>
+
+    <body ng-controller="c1">
+      <div class="container">
+         <form class="form-group border-1" name="RegistrationForm" method="post">
+              {% csrf_token %}
+             <h3>Registration Form</h3>
+              <b>FirstName:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+              <input autocomplete="off" type="text" name="first_name"
+                     ng-model="Registration.first_name" placeholder="Enter FirstName"><br><br>
+
+             <b>LastName:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+              <input autocomplete="off" type="text" name="last_name"
+                     ng-model="Registration.last_name" placeholder="Enter LastName"><br><br>
+
+             <b>UserName:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+              <input  autocomplete="off" type="text" name="user_name"
+                      ng-model="Registration.user_name" placeholder="Enter UserName"><br><br>
+
+               <b>MobileNumber:&nbsp&nbsp</b>
+              <input  autocomplete="off" type="number" name="mobile_number"
+                      ng-model="Registration.mobile_number" placeholder="Enter Mobile Number"><br><br>
+
+               <b>Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+              <input type="email" name="email"
+                     ng-model="Registration.email" placeholder="Enter EmailId"><br><br>
+              <center>
+              <input type="submit" value="Submit" class="btn btn-success">
+              <input type="reset" value="clear" class="btn btn-danger">
+              </center>
+         </form>
+           Registration Data:{{Registration}}
+      </div>
+    </body>
+
+</html>

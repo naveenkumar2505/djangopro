@@ -1,0 +1,44 @@
+<html>
+
+   <body>
+
+       <form method="post">
+           {% csrf_token %}
+
+           <table>
+
+                        <tr>
+                           <th>Id</th>
+                           <th>FirstName</th>
+                           <th>LastName</th>
+                           <th>Salary</th>
+                           <th>Location</th>
+                           <th>email</th>
+                           <th>company</th>
+                        </tr>
+                   {% for data in data %}
+                        <tbody>
+
+                               <tr>
+                                   <td>{{ data.id }}</td>
+                                   <td>{{ data.firstname }}</td>
+                                   <td>{{ data.lastname }}</td>
+                                   <td>{{ data.salary }}</td>
+                                   <td>{{ data.location }}</td>
+                                   <td>{{ data.email }}</td>
+                                   <td>{{ data.company }}</td>
+                               </tr>
+
+
+                        </tbody>
+
+
+                   {% endfor %}
+
+           </table>
+
+       </form>
+
+   </body>
+
+</html>

@@ -1,0 +1,22 @@
+p .label{
+    color: darkcyan;
+    font-family: Verdana;
+
+}
+form{
+    alignment: center;
+    border: 2px silver solid;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 400px;
+    padding-left: 100px;
+    background-color: #b3b7bb;
+}
+#hd1{
+    text-decoration-color: #495057;
+    color: #b3d7ff;
+}
+p{
+    color: red;
+}

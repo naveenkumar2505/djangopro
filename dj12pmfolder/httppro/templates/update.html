@@ -1,0 +1,23 @@
+<html>
+
+    <title>Update the data</title>
+
+<body>
+
+   <div class="container">
+
+       <form method="post">
+           {% csrf_token %}
+           {% if data in id %}
+                 {{ data.id }}
+                 {{ data.location }}
+                 {{ data.salary }}
+           {% endif %}
+
+       </form>
+
+   </div>
+
+</body>
+
+</html>

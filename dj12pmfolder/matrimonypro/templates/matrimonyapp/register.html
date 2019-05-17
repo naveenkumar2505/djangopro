@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+
+ <title>Matrimony</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+h4{
+    font-size: 10px ;
+}
+    body{
+        background-size: cover;
+        background-color: transparent;
+    }
+    form{
+        color: black;
+    }
+    .form-control{
+        display: block;
+        width: 100%;
+        height: 25px;
+        padding: 6px 12px;
+        font-size: 10px;
+        line-height: 2.428571;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button{
+        margin-right: 30px;
+    }
+    label{
+        font-size: 0px;
+    }
+</style>
+
+  </head>
+{#  <body background="https://media.gettyimages.com/photos/couple-watching-full-moon-over-the-ocean-picture-id670263564">#}
+  <body background="https://www.3d-wallpapers.info/wp-content/uploads/329/3d-love-couple-photo.jpg">
+
+<center>
+    <h3>Please register your details here..</h3>
+
+</center>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <form method="POST">
+                {% csrf_token %}
+               <h4> {{ form }}</h4> <br>
+              <center>
+                  <button type="submit" class="btn btn-info">Sign Up</button>
+                <button type="reset" class="btn btn-danger">Reset</button></center>
+            </form> <br>
+
+{#            <h4 style="float: right;color: red;margin-top: -13px;">#}
+
+            </h4>
+
+        </div>  <!-- .col-md-4 -->
+    </div>
+</div>
+
+
+
+    {#    <form class="" action="thankyou.html" method="post">#}
+{##}
+{#      <label for="name">Name</label>#}
+{#      <input id="name" type="text" name="name" placeholder="Enter Name" required><br>#}
+{##}
+{#      <label for="mail">Email</label>#}
+{#      <input id="mail" type="email" name="mail" placeholder="Enter Email" required><br>#}
+{##}
+{#      <label for="age">Age</label>#}
+{#      <input id="age" type="text" name="age" placeholder="Enter Age" required>#}
+{##}
+{#      <h3>Are You Interested In Dating</h3>#}
+{#      <label for="dat">Yes</label>#}
+{#      <input id="dat" type="radio" name="dating" value="">#}
+{#      <label for="dat1">No</label>#}
+{#      <input id="dat1" type="radio" name="dating" value="">#}
+{##}
+{#      <h3>Your Expections like:</h3>#}
+{#      <select class="" name="expe">#}
+{#        <option value="katrina">Katrina Kaif</option>#}
+{#        <option value="kareena">Kareena Kapoor</option>#}
+{#        <option value="sunny">Sunny Leone</option>#}
+{#        <option value="mallika">Mallika Sherawat</option>#}
+{#      </select>#}
+{#      <h3>How many marraiges you want:</h3>#}
+{#      <select class="" name="nom">#}
+{#        <option value="One">1</option>#}
+{#        <option value="Two">2</option>#}
+{#        <option value="Three">3</option>#}
+{#        <option value="Four">4</option>#}
+{#      </select>#}
+{##}
+{#      <h3>Are You Heavy Alocholic:</h3>#}
+{#      <input type="checkbox" name="Alocholic" value="yes">YES#}
+{#      <input type="checkbox" name="Alocholic" value="no">NO#}
+{#      <input type="checkbox" name="Alocholic" value="week-end">Only on week-ends#}
+{##}
+{#      <h3>Your Preferences and Extra Information</h3>#}
+{#      <textarea name="pref" rows="8" cols="80"></textarea>#}
+{#      <input type="submit" name="" value="Register">#}
+{#    </form>#}
+
+
+  </body>
+</html>

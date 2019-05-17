@@ -1,0 +1,13 @@
+<html>
+<body>
+     <form method="post">
+         {% csrf_token %}
+         <b>ProductId:</b>{{ form.product_id }}<br>
+         <b>ProductName:</b>{{ form.product_name }}<br>
+         <b>ProductSize:</b>{{ form.product_size }}<br>
+         <b>ProductActive:</b>{{ form.product_active }}<br>
+         <b>ProductPrice:</b>{{ form.product_price }}<br>
+         <input type="submit" value="Submit">
+     </form>
+</body>>
+</html>

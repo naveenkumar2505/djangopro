@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <title>Narayana Matrimonial</title>
+
+      <style>
+          body{
+              {#opacity: 0.5;#}
+              {#filter: alpha(opacity=100);#}
+              background-repeat: repeat-x;
+              {#background-color: transparent;#}
+              background-repeat: no-repeat;
+
+          }
+         h5{
+             text-align: center ;
+         }
+          h3,p{
+              color: blue;
+          }
+          #clnt1{
+              color: red;
+              font-family: cursive;
+          }
+          .h31{
+              font-family: cursive;
+              text-align: center;
+              color: red;
+          }
+          .pre1{
+              font-family: cursive;
+              font-size: 15px;
+              color: blue;
+          }
+          #ttl1{
+              font-family: cursive;
+              color: black;
+              font-size: 40px;
+              margin-top: 1px;
+          }
+          .form-control{
+              height: 25px;
+              font-size: 10px;
+          }
+          label{
+              height: 10px;
+              color: red;
+              font-size: 10px;
+              padding-top: -15px;
+              text-align: center;
+          }
+          form{
+              background-color: transparent;
+              padding: 1px 40px;
+              margin-top: -1px;
+              {#border: red 2px solid;#}
+          }
+          button{
+              size: 5px;
+              padding-top: -1px ;
+              margin-top: 40px;
+          }
+          #a2{
+              color:#040203;
+          }
+      </style>
+
+  </head>
+
+<body background="http://matrimony.maithil.org/assets/images/banner2.jpg">
+
+    <center>
+        <h1 id="ttl1">Welcome to Narayana Matrimonial</h1>
+        <h4 style="padding-top: -10px">India's No.1 Matrimonial Website</h4>
+
+    </center>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form }}<br>
+            <center>
+                <input type="submit" value="Login" class="btn btn-success">
+                <input type="reset" value="Reset" class="btn btn-danger">
+            </center>
+
+            </form>
+            <br>
+           <center> <a id="a2" href="register">Click Here to register</a><br></center>
+        </div>
+    </div>
+</div>
+
+    <center><h1 style="padding-top: 450px; margin-top: 50px " id="clnt1">Our Clients</h1></center>
+
+{#============================================================================================#}
+
+
+<div class="container" style="background:bisque">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <a href="static/images/mahesh.jpg" target="_blank">
+          <img src="{% static  'images/mahesh.jpg' %}"  alt="No Mahesh Img"
+             style="width:50%; height:40%; margin: auto;">
+        </a>
+
+        <div class="carousel-caption">
+          <h3>Mahesh</h3>
+          <p>He is most handsome person in tollywood..!</p>
+        </div>
+      </div>
+
+
+      <div class="item">
+
+       <a href="static/images/ntr.jpg" target="_blank">
+            <img src="{% static  'images/ntr.jpg' %}"  alt="No NTR Img"
+                 style="width:50%; height:40%; margin: auto;">
+        </a>
+
+        <div class="carousel-caption">
+          <h3>NTR</h3>
+          <p>He is a good dancer in the tolywood!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="static/images/Sachin.jpg" target="_blank">
+            <img src="{% static  'images/Sachin.jpg' %}"  alt="No Sachin Img"
+                 style="width:50%; height:40%; margin: auto;">
+        </a>
+        <div class="carousel-caption">
+          <h3>Sachin</h3>
+          <p>He is god of cricket</p>
+        </div>
+      </div>
+
+
+        <div class="item">
+        <a href="static/images/charan.jpg" target="_blank">
+            <img src="{% static  'images/charan.jpg' %}"  alt="No Sachin Img"
+                 style="width:50%; height:40%; margin: auto;">
+        </a>
+        <div class="carousel-caption">
+          <h3>Sachin</h3>
+          <p>He is god of cricket</p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{##}
+{#<div class="container" style="background:aqua">#}
+{#    <div class="row">#}
+{#        <div class="col-md-6">#}
+{#            <h1 class="text-center"><a class="BG" href="">Boys List</a></h1>#}
+{##}
+{#            <h5><button class="btn btn-link" data-toggle="modal"#}
+{#                        data-target="#myModal" onclick="userFunction()">Srinu</button></h5>#}
+{##}
+{#            <h5><a>Raaju</a></h5>#}
+{#            <h5><a>Narayana</a></h5>#}
+{#        </div>#}
+{##}
+{#        <div class="col-md-6">#}
+{#            <h1 class="text-center"><a class="BG" href="">Girls List</a></h1>#}
+{#            <h5><a>Samantha</a></h5>#}
+{#            <h5><a>Rakhul</a></h5>#}
+{#            <h5><a>Kajol</a></h5>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{##}
+{#    <!-- Trigger the modal with a button -->#}
+{##}
+{##}
+{#  <!-- Modal -->#}
+{#  <div class="modal fade" id="myModal" role="dialog">#}
+{#    <div class="modal-dialog modal-sm">#}
+{#      <div class="modal-content">#}
+{#        <div class="modal-header">#}
+{#          <button type="button" class="close" data-dismiss="modal">&times;</button>#}
+{#          <h4 class="modal-title">Modal Header</h4>#}
+{#        </div>#}
+{#        <div class="modal-body">#}
+{#          <p>This is a small modal.</p>#}
+{#        </div>#}
+{#        <div class="modal-footer">#}
+{#          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{##}
+{##}
+{##}
+
+
+  </div>
+
+<center><h1 style="color: red; font-family: cursive; margin-top: 50px">About US</h1></center>
+
+<div class="container" style="padding-top: 20px;margin-top: 10px; border: 2px red solid">
+    <div class="row">
+        <div class="col-md-6">
+            <pre class="pre1">
+<h3 class="h31">   Heighlights </h3>
+1. High priority for late marriages
+2. Priceless services for customers
+3. High communication.
+4. We are unique in the world.
+            </pre>
+        </div>
+        <div class="col-md-6">
+        <pre class="pre1">
+<h3 class="h31">  Achievements </h3>
+1. Got best matrimony award in 2000 year.
+2. Selected as part of top 10 matrimonies in the world.
+3. All celebraties will opt our matrimony.
+
+            </pre>
+        </div>
+
+    </div>
+
+
+</div>
+
+<center><h1  style="color: red; font-family: cursive; margin-top: 50px">Contact US</h1></center>
+
+<div class="container"  style="padding-top: 20px;margin-top: 10px; border: 2px red solid">
+    <div class="row">
+        <div class="col-md-6" >
+            <center><h4 style="color: red">Address - 1</h4></center>
+            <p><span class="glyphicon glyphicon-map-marker lg"></span> &nbsp;Bapu nagar,SR nagar,Hyderabad-500016</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>  contact@narayanamatrimony.com</p>
+            <p><span class="glyphicon glyphicon-earphone"></span> +91 8179817681</p>
+            <p><span class="glyphicon glyphicon-time"></span> &nbsp;MON - SAT : 24/7 (24 Hours)</p>
+            <p><span class="glyphicon glyphicon-time"></span> &nbsp;SUN : 6am to 11pm</p>
+        </div>
+        <div class="col-md-6" >
+            <center><h4 style="color: red">Address - 2</h4></center>
+            <p><span class="glyphicon glyphicon-map-marker lg"></span> &nbsp;4th line, BTM Layout,Bangalore-500016</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>  info@narayanamatrimony.com</p>
+            <p><span class="glyphicon glyphicon-earphone"></span> +91 8179817681</p>
+            <p><span class="glyphicon glyphicon-time"></span> &nbsp;MON - SAT : 24/7 (24 Hours)</p>
+            <p><span class="glyphicon glyphicon-time"></span> &nbsp;SUN : 6am to 11pm</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" style="margin-top: 50px; background-color: blue">
+    <div class="row">
+        <div class="col-md-4">
+            <pre style="background-color: blue; border: blue; color: #fefefe">
+ABOUT US:
+Narayana Matrimony started 100
+years ago. It started with one
+user per month, but now a days
+we are getting 1000 users per
+day.
+We are not competate to any other
+matrimonies and we dont have any
+branches in Hyderabad.
+Now We are running around 100 brances
+throught out the world.
+            </pre>
+        </div>
+        <div class="col-md-4">
+ <pre style="background-color: blue; border: blue; color: #fefefe">
+<b>Brances in India:</b>
+1. S.R Nagar, Hyderabad
+2. Madhapur, Hyderabad
+3. BTM, Bangalore
+4. Perungudi, Chennai
+5. Shivaji Park, Mumbai
+6. Kannur, Kerala
+7. Chanakyapuri, Delhi
+8. Kalighat, Kalkota
+9. Itwari, Nagapur
+10. Bavdhan, Pune
+            </pre>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

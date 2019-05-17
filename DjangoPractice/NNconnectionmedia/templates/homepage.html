@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+    <head>
+       <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}">
+     <link rel="stylesheet" href="{% static 'css\homepage.css' %}">
+
+    </head>
+  <body>
+    <div class="container">
+      <form method="post" id="reg" onclick="return validation();">
+          {% csrf_token %}
+          <h4 id="hd1">Register here</h4>
+          <b class="label">Firstname:</b>&nbsp&nbsp;
+          <input type="text" name="firstname" placeholder="Enter the FirstName" id="firstName" autocomplete="off"><br><br>
+          <p id="fname_error"></p>
+
+          <b class="label">Lastname:</b>&nbsp&nbsp;
+          <input type="text" name="lastname" placeholder="Enter the lastName" id="lastName" autocomplete="off"><br><br>
+          <p id="lname_error"></p>
+
+
+          <b class="label">Email:</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+          <input type="email" name="email" placeholder="Enter the email" id="email" autocomplete="off"><br><br>
+          <p id="email_error"></p>
+
+          <b class="label">number:</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+          <input type="number" name="num" placeholder="Enter the number" id="mobileNumber" autocomplete="off"><br><br>
+          <p id="numb_error"></p>
+
+          <b class="label">password:</b>&nbsp&nbsp&nbsp&nbsp;
+          <input type="password" name="pas" placeholder="Enter the password" id="password" autocomplete="off"><br><br>
+          <p id="pass_error"></p>
+
+          <b class="label">DOB:</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+          <input type="date" name="dob" placeholder="Enter the date of birth" id="dob"><br><br>
+
+          <b class="radio">male
+          <input type="radio" name="gen" placeholder="Select the gender" value="male" class="gen">
+          </b>
+
+          <b class="radio">female
+
+              <input type="radio" value="female" name="gen" placeholder="Select the gender" class="gen">
+          </b>
+          <input type="submit" value="Submit" class="btn btn-success">
+          <input type="reset" value="clear" class="btn btn-warning">
+      </form>
+        <p id="p1"></p>
+       </div>
+       <script>
+          function validation() {
+               var firstName=document.getElementById("firstName").value;
+               var lastName=document.getElementById("lastName'").value;
+               var email=document.getElementById("email").value;
+               var mobileNumber=document.getElementById("mobileNumber").value;
+               var password=document.getElementById("password").value;
+
+               if(firstName=="" || lastName=="" || email=="" || mobileNumber=="" || password==""){
+                   document.getElementById("p1").innerHTML="all fields are required";
+                   return false;
+               }
+               if(firstName.length>=5||firstName.length<=10){
+                   document.getElementById("fname_error").innerHTML="firstname must be min 5 and max 10 charecters"
+                   return false;
+               }
+               if(lastName.length>=5||lastName.length<=10){
+                   document.getElementById("lname_error").innerHTML="lastname must be min 5 and max 10 charecters"
+                   return false;
+               }
+               if(mobileNumber.length!=10){
+                   document.getElementById("numb_error").innerText="mobile number should be 10 numbers";
+                   return false;
+               }
+          }
+        </script>
+  </body>
+</html>
